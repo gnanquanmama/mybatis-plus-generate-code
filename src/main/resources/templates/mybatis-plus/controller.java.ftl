@@ -66,10 +66,14 @@ public class ${table.controllerName} {
     @ApiOperation(value = "分页查询")
     @PostMapping("/service/${package.ModuleName}/queryByPage")
     public ResponseResult<IPage<${entity}>> queryByPage(@RequestBody JSONObject queryObject) {
-        IPage<${entity}> page = SmartPages.create(queryObject);
-        QueryWrapper<${entity}> queryWrapper = SmartWrappers.create(queryObject, ${entity}.class);
-        page = ${table.serviceName ? uncap_first}.page(page, queryWrapper);
-        return ResponseResult.success(page);
+
+         SmartWrapper<${entity}> smartWrapper = new SmartWrapper<>();
+         smartWrapper.parse(queryObject, ${entity}.class);
+
+         QueryWrapper<${entity}> queryWrapper = smartWrapper.getQueryWrapper();
+         IPage<${entity}> page = smartWrapper.generatePage();
+         ${table.serviceName ? uncap_first}.page(page, queryWrapper);
+         return ResponseResult.success(page);
     }
 
 }

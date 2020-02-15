@@ -25,7 +25,7 @@ public class CodeGenerator {
     static String URL = "jdbc:mysql://192.168.126.80:3307/seckillcenter?useUnicode=true&characterEncoding=utf8&useSSL=false&allowPublicKeyRetrieval=true";
     static String DRIVER = "com.mysql.jdbc.Driver";
     static String USERNAME = "DMS";
-    static String PASSWORD = "xxxxxx";
+    static String PASSWORD = "liby@DMS";
 
     /**
      * <p>
