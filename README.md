@@ -17,12 +17,12 @@
    示例：@RCacheable(key = "dmt::miniprogram::token", secKey = "#token", ttl = 1, timeUnit = TimeUnit.DAYS)  
 
 
-* ####自定义查询语法   
+* #### 自定义查询语法   
   > 查询条件语法规则
     ```json
          {
-             "current":  页码,
-             "size":  页数,
+             "current":  "页码",
+             "size":  "页数",
              "modelField_$_operation":"搜索条件",
              "orderByDesc":"modelField"
           }
@@ -63,7 +63,7 @@
         
      
 ---
-#### 方法调用树示例
+### 方法调用树示例
     
     process(提交订单）
     │
