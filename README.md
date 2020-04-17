@@ -1,6 +1,6 @@
 # Tropical Fish   
 
-基于springboot的后端开发脚手架, ORM使用mybatis-plus, 缓存框架使用Redisson, 定时调度使用xxl-job, 服务链路监控使用zipkin, rpc使用dubbo, 接口文档使用swagger。
+Pragmatic风格的Java后端开发脚手架。 基于SpringBoot，技术选型采用主流的框架（Mybatis-Plus，Redisson，Xxl-job，Dubbo，Swagger）。开箱即用，提高研发效能。
 
 
 ### 项目特点
@@ -64,6 +64,7 @@
      
 ---
 ### 方法调用树示例
+
     
     process(提交订单）
     │
