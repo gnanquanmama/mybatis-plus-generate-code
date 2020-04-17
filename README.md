@@ -17,50 +17,53 @@
    示例：@RCacheable(key = "dmt::miniprogram::token", secKey = "#token", ttl = 1, timeUnit = TimeUnit.DAYS)  
 
 
-#### 自定义查询语法   
-    1. 查询条件语法规则：
-      {
-         "current":  页码,
-         "size":  页数,
-         "modelField_$_operation":"搜索条件",
-         "orderByDesc":"modelField"
-      }
-      
-    2. Demo ：
-      {
-          "current":1,
-          "size":10,
-          "userName_$_like":"github",
-          "orderStatus_$_in":[1,3,4],
-          "createTime_$_gt":1581392098000,
-          "orderByDesc": "createTime"
-       }
+* ####自定义查询语法   
+  > 查询条件语法规则
+    ```json
+         {
+             "current":  页码,
+             "size":  页数,
+             "modelField_$_operation":"搜索条件",
+             "orderByDesc":"modelField"
+          }
+    ```
+  > 示例
+    ```json
+         {
+              "current":1,
+              "size":10,
+              "userName_$_like":"github",
+              "orderStatus_$_in":[1,3,4],
+              "createTime_$_gt":1581392098000,
+              "orderByDesc": "createTime"
+         }
+    ```
        
- 关键字说明       
+  > 关键字说明       
        
-|KEYWORD| DESC|
-|:----: | :----: |
-| modelField  | 模型字段 |
-| \_$_  | 分隔符 |  
-| orderByDesc  | 递减 | 
-| orderByDesc  | 递增 | 
-       
-       
- Operation 取值描述
-
-|Operation| DESC| 语义| 
-|:----: | :----: | :----:| 
-| eq  | 等于 | = |
-| ne  | 不等于 | <> |
-| gt  | 大于 | > |
-| ge  | 大于等于 | >= |
-| lt  | 小于 | < |
-| ne  | 不等于 | <= |
-| like| 模糊搜索 | '%值%' |
-| in  | in | in |
+    |KEYWORD| DESC|
+    |:----: | :----: |
+    | modelField  | 模型字段 |
+    | \_$_  | 分隔符 |  
+    | orderByDesc  | 递减 | 
+    | orderByDesc  | 递增 | 
     
-         
-#### 方法调用树
+  >Operation取值描述
+
+    |Operation| DESC| 语义| 
+    |:----: | :----: | :----:| 
+    | eq  | 等于 | = |
+    | ne  | 不等于 | <> |
+    | gt  | 大于 | > |
+    | ge  | 大于等于 | >= |
+    | lt  | 小于 | < |
+    | ne  | 不等于 | <= |
+    | like| 模糊搜索 | '%值%' |
+    | in  | in | in |
+        
+     
+---
+#### 方法调用树示例
     
     process(提交订单）
     │
