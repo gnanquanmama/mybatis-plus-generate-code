@@ -18,16 +18,13 @@
 
 
 #### 自定义查询语法   
-    1.查询条件语法规则：
+    1. 查询条件语法规则：
       {
          "current":  页码,
          "size":  页数,
          "modelField_$_operation":"搜索条件",
          "orderByDesc":"modelField"
       }
-      
-      说明：modelField 对应的是接口返回的字段名称，例如userName;  
-       _$_为分隔符; orderByDesc，orderByAsc  
       
     2. Demo ：
       {
@@ -44,7 +41,7 @@
 |KEYWORD| DESC|
 |:----: | :----: |
 | modelField  | 模型字段 |
-| _$_  | 分隔符 |  
+| \_$_  | 分隔符 |  
 | orderByDesc  | 递减 | 
 | orderByDesc  | 递增 | 
        
